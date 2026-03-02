@@ -16,7 +16,7 @@ main.container {
     height:100%;
 }
 
-h1 {
+h1.pop-title {
     text-decoration: underline;
     font-size:3rem;
     /* text-decoration-color: rgb(var(--main-col)); */
