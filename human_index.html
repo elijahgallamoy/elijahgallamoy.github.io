@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
 <head>
-    <title>Elijah Gallamoy - About</title>
+    <script src="./pop_guesser.js" type="module"></script>
+    <link rel="stylesheet" href="pop_styles.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
     <div class="sidebar">
         <div class="header">
@@ -27,21 +27,16 @@
     </div>
 
     <main class="content">
-        <div class="article">
-            <h1 class="title">About</h1>
-            <p class="paragraph">
-                Hi, I'm Eli. I'm currently studying Mathematics, Computer Science and Physics in Exeter. 
-                My interests include computer simulation, linear algebra, graph theory, computational optimisation and web development.
-                I'm also interested in chemistry, linguistics and photography.
-            </p>
-            <p class="paragraph">
-                This site is generally a space for me to put my interests, projects and other bits of information.
-                I might write some articles or take some detailed looks into my projects here in the future, but for now it's a pretty simple, static site.
-            </p>
-            <p class="paragraph">
-                Most recent thing: <a href="/human_index.html">Human Indexer</a>
-            </p>
-        </div>
+        <main class="container">
+            <div class="semicircle"></div>
+            <h1>Human Indexer</h1>
+            <p class="desc">If you were born after 1980, enter your birthday and this program will tell <b>your index in the human race</b> (that is, how many humans were born before you)</p>
+            <input type="date" class="pop-picker">
+            <div class="result pop-hidden">
+                <p class="human">You are human</p>
+                <p class="num">#<span id="result-value">???</span></p>
+            </div>
+            <div class="pop-foot">Yes, of course this is a rough approximation. Data comes from the UN and <a href="https://www.prb.org/">PRB</a>.</div>
+        </main>
     </main>
-
 </body>
