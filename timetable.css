@@ -1,0 +1,169 @@
+
+    :root{
+        --unit-height: 100px;      /* height of each day row */
+        --row-gap: 6px;            /* gap between day rows */
+        --slot-gap: 6px;           /* gap between blocks within a row */
+        --gutter-color: #e2e2e2;   /* empty / lunch / free-time colour */
+        --text-color: #1f2430;
+        --label-color: #9aa0a6;
+        --day-label-width: 46px;
+        --ruler-height: 48px;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+        margin: 0;
+        background: #ffffff;
+    }
+
+    .timetable{
+        max-width: 1300px;
+        margin: 0 auto;
+        font-family: 'Space Mono', monospace;
+    }
+
+    /* ---------- RULER (hour markings across the top) ---------- */
+
+    .ruler{
+        display: flex;
+        padding-left: var(--day-label-width);
+        height: var(--ruler-height);
+        align-items: flex-start;
+        position: relative;   /* NEW: anchor point for the end tick */
+    }
+
+    .ruler-track{
+        display: flex;
+        flex: 1;
+        gap: var(--slot-gap);
+    }
+
+    .ruler-tick{
+        flex-grow: var(--len, 1);
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var(--label-color);
+        font-size: 13px;
+        position: relative;
+    }
+
+    /* NEW: a final tick pinned exactly to the right edge of the track,
+   so the last hour label/dot lines up with the end of the last block
+   instead of stopping one unit short */
+    .ruler-tick.end{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-grow: 0;
+        align-items: center;
+    }
+
+    .ruler-tick .hour-label{
+        font-size: 20px;
+        line-height: 1;
+        transform: translateX(-50%); /* centre the numeral on the tick's start edge */
+    }
+
+    .ruler-tick .half-label{
+        font-size: 12px;
+        line-height: 1;
+        align-self: flex-start;
+        margin-left: -2px;
+    }
+
+    .ruler-tick .dot{
+        margin-top: 10px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--label-color);
+    }
+
+    .ruler-tick.blank{ visibility: hidden; }
+
+    /* ---------- DAY ROWS ---------- */
+
+    .day-row{
+        display: flex;
+        align-items: stretch;
+        height: var(--unit-height);
+        margin-bottom: var(--row-gap);
+    }
+
+    .day-label{
+        width: var(--day-label-width);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--label-color);
+        font-size: 18px;
+        letter-spacing: 1px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        user-select: none;
+    }
+
+    .day-content{
+        display: flex;
+        flex: 1;
+        gap: var(--slot-gap);
+    }
+
+    /* A block (or an empty "spacer" block) fills space proportional to
+        its [data-length] value. Because every block – including blank
+        gutter/lunch/free-time gaps – is a real flex child with a length,
+        rows can start late or end early simply by giving the first/last
+        block the desired length and colour. */
+
+    .block{
+        flex-grow: var(--len, 1);
+        flex-shrink: 0;
+        flex-basis: 0;
+        min-width: 0;
+        border-radius: 6px;
+        background: var(--block-color, var(--gutter-color));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 6px 8px;
+        overflow: hidden;
+    }
+
+    .block .block-subtitle, .block-title {
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        color: var(--text-color);
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .block .block-subtitle {
+        font-size: 12px;
+    }
+
+    .block .block-title {
+        font-size:16px;
+    }
+
+    .block .subtitle
+
+    .block.empty{ background: var(--gutter-color); }
+
+    @media (max-width: 720px){
+        .block .line{ font-size: 11px; }
+        .day-label{ font-size: 13px; }
+        :root{ --unit-height: 74px; --day-label-width: 32px; }
+    }
+    .build-button {
+        background-color: lightgreen;
+        font-size:21px;
+        border:1px solid black;
+        border-radius:5px;
+        cursor:pointer;
+    }

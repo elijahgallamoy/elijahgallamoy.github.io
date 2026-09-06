@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Timetable Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timetable.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    </head>
+    <body>
+    <div class="sidebar">
+        <div class="header">
+            <h1>Elijah Gallamoy</h1>
+            <h3>Mathematics, Computer Science and Physics student in the UK</h3>
+        </div>
+        <div class="links">
+            <a href="./index.html">About</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./files.html">Files</a>
+            <!-- <a href="#">Blog</a> -->
+            <!-- <a href="#">Projects</a> -->
+        </div>
+
+        <div class="social-media">
+            <a href="https://github.com/elijahgallamoy" target="_blank" id="github"></a>
+            <a href="mailto:elijahgallamoy@gmail.com" id="email" style="--url:https://raw.githubusercontent.com/google/material-design-icons/refs/heads/master/src/communication/alternate_email/materialiconsround/24px.svg;"></a>
+        </div>
+    </div>
+
+    <main class="content">
+        <h3>Using the tool</h3>
+        <p><b>(First off: not optimised for mobile; please use a pc)</b></p>
+        <p>Enter what classes you have in the table below; you can use the subtitle to put info about teacher, location etc. Changing some values will
+            not do anything because they are set on your timetable (but these will be blank on the printout anyway.) You will need to leave some values blank.</p>
+
+        <p>It's recommended to generate the timetable regularly while editing to make sure you aren't inputting incorrectly.</p>
+        <p><b>Input not appearing on L6:</b> L3 and L4 seem to be combined in some weird ways so if you've left L3/L4 blank while filling it in and L6 isn't appearing, it may be worth pushing
+            all your inputs back one.</p>
+
+        <h3>Input form</h3>
+        <form class="input-form">
+            <label>Select your year group:</label>
+
+            <select class="yg-select">
+                <option value="y12">Y12</option>
+                <option value="y13">Y13</option>
+            </select>
+
+            <table>
+                <tr>
+                    <th>Lesson</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Weds</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                </tr>
+                <tr>
+                    <th>L1</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+                <tr>
+                    <th>L2</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+                <tr>
+                    <th>L3</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+                <tr>
+                    <th>L4</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+                <tr>
+                    <th>L5</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+                <tr>
+                    <th>L6</th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                    <th>
+                        <select>
+                            <option value="">None</option>
+                            <option value="maths">Maths</option>
+                            <option value="compsci">Compsci</option>
+                            <option value="physics">Physics</option>
+                            <option value="college">Exe Coll</option>
+                            <option value="emc">EMC</option>
+                            <option value="skills">EMC skills</option>
+                            <option value="cx">Curriculum X</option>
+                            <option value="pastoral">Pastoral</option>
+                            <option value="tutorial">Academic tutorial</option>
+                        </select>
+                        <input type="text" placeholder="Subtitle (optional)"></input>
+                    </th>
+                </tr>
+            </table>
+
+            <input type="button" value="Generate timetable" onclick="buildFromForm();" class="build-button">
+        </form>
+        <h3>Timetable (take a screenshot)</h3>
+        <div class="timetable">
+            <!-- ============ RULER ============ -->
+            <div class="ruler">
+                <div class="ruler-track" id="ruler-track"></div>
+            </div>
+
+            <!-- ============ DAYS ============ -->
+            <div id="days"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+    /* ==========================================================================
+    DATA MODEL
+    --------------------------------------------------------------------------
+    UNIT = 1 half-hour. The visible day runs from START_HOUR to END_HOUR.
+
+    Each day is an array of "segments". Every segment fills a span of the
+    timeline proportional to its `length` (in units of UNIT). Segments with
+    no `text` render as plain gutter-coloured gaps -- this is how a row can
+    start later or finish earlier than the rest, or how "LUNCH"/free periods
+    are represented. Segments with `text` can hold one or two lines and an
+    optional `color`.
+    ========================================================================== */
+
+    const START_HOUR = 9;
+    const END_HOUR   = 16.5; // 4pm
+    const UNIT_MINUTES = 15;
+
+    const COLORS = {
+        purple: '#9c92e8',
+        blue:   '#6cc0ee',
+        green:  '#a0d46b',
+        red:    '#c9536b',
+        pink:   '#f2a8c4',
+        teal:   '#4f8f8a',
+    };
+
+    const subject_to_color = {
+        'compsci': COLORS.blue,
+        'physics': COLORS.red, 
+        'maths': COLORS.purple,
+        'tutorial': COLORS.teal,
+        'pastoral': COLORS.teal,
+        'emc': COLORS.pink,
+        'skills': COLORS.pink,
+        'cx': COLORS.pink,
+        'college': COLORS.teal
+    }
+
+    function seg(length, text, color){
+        return { length, text: text || null, color: color || null };
+    }
+
+    /* ==========================================================================
+    RENDER
+    ========================================================================== */
+
+    function buildRuler(){
+        const track = document.getElementById('ruler-track');
+        const totalUnits = ((END_HOUR - START_HOUR) * 60) / UNIT_MINUTES;
+
+        for (let u = 0; u < totalUnits; u++){
+            const tick = document.createElement('div');
+            tick.className = 'ruler-tick';
+            tick.style.setProperty('--len', 1);
+            const isHour = (u % 4 === 0);
+            const hour = START_HOUR + Math.floor(u / 4);
+            const displayHour = hour > 12 ? hour - 12 : hour;
+
+            if (isHour){
+            tick.innerHTML = `<span class="hour-label">${displayHour}</span><span class="dot"></span>`;
+            } else {
+            tick.innerHTML = `<span class="hour-label">⠀</span><span class="dot"></span>`;
+            }
+            track.appendChild(tick);
+        }
+
+        // Closing tick at the very end of the range. END_HOUR may itself be a
+        // half-hour (e.g. 16.5), so work out whether it lands on the hour or
+        // on the half, the same way the loop above does.
+        const endTotalMinutesFromStart = (END_HOUR - START_HOUR) * 60;
+        const endIsHour = (endTotalMinutesFromStart % 60) === 0;
+        const endHourValue = Math.floor(END_HOUR);
+        const endDisplayHour = endHourValue > 12 ? endHourValue - 12 : endHourValue;
+
+        const endTick = document.createElement('div');
+        endTick.className = 'ruler-tick end';
+        endTick.innerHTML = endIsHour
+            ? `<span class="hour-label">${endDisplayHour}</span><span class="dot"></span>`
+            : `<span class="hour-label">⠀</span><span class="dot"></span>`;
+        track.appendChild(endTick);
+        }
+    
+    function makeBlock(segment){
+    const el = document.createElement('div');
+    el.className = 'block' + (segment.text ? '' : ' empty');
+    el.style.setProperty('--len', segment.length);
+    if (segment.color){
+        el.style.setProperty('--block-color', segment.color);
+    }
+    if (segment.text){
+        let i = 0;
+        segment.text.forEach(line => {
+            const span = document.createElement('span');
+            if (i == 1) {
+                span.className = 'block-subtitle';
+            } else {
+                span.className = 'block-title';
+            }
+
+            span.textContent = line;
+            el.appendChild(span);
+            i++;
+        });
+    }
+    return el;
+    }
+
+    function buildDays(schedule){
+        const container = document.getElementById('days');
+        Object.entries(schedule).forEach(([day, segments]) => {
+            const row = document.createElement('div');
+            row.className = 'day-row';
+
+            const label = document.createElement('div');
+            label.className = 'day-label';
+            label.textContent = day;
+
+            const content = document.createElement('div');
+            content.className = 'day-content';
+            segments.forEach(s => content.appendChild(makeBlock(s)));
+
+            row.appendChild(label);
+            row.appendChild(content);
+            container.appendChild(row);
+        });
+    }
+
+    /*
+    BUILDING
+    */
+    function readTimetableForm(form) {
+        const yeargroup = form.querySelector('.yg-select').value;
+
+        const rows = form.querySelectorAll('table tr');
+        const days = {}; // will hold day: { lessons: [] }, one per day, in header order
+
+        let day_names = [];
+        rows.forEach((row, rowIndex) => {
+            const cells = row.querySelectorAll('th');
+            if (rowIndex === 0) {
+                // header row: cells[0] is "Lesson", cells[1..] are day names
+                for (let i = 1; i < cells.length; i++) {
+                    let day_name = cells[i].textContent.trim()
+                    days[day_name] = {lessons: []};
+                    day_names.push(day_name);
+                }
+                return;
+            }
+
+            // lesson row (L1, L2, ...): cells[0] is the row label, cells[1..] are one per day
+            for (let i = 1; i < cells.length; i++) {
+                const select = cells[i].querySelector('select');
+                const input  = cells[i].querySelector('input');
+                
+                days[day_names[i-1]].lessons.push({
+                    name:     select?.value || '',
+                    subtitle: input?.value.trim() || '',
+                });
+            }
+        });
+
+        return [yeargroup, days];
+    }
+    
+    const days = ['Mon', 'Tues', 'Weds', 'Thurs', 'Fri'];
+
+    function getColor(selectValue) {
+        return subject_to_color[selectValue]
+    }
+
+    function buildFromData(data) {
+        // data format: Mon: [[name, color], ...], Tues: ...
+        const schedule = {}
+        const durations = { // format: [time, type]: type is 0 if empty, 1 if populattable
+            'Mon':   [[1, 0], [6, 0], [4, 1], [1, 0], [3, 1], [2, 0], [3, 1], [4, 1], [1, 0], [4, 1]], // 29
+            'Tues':  [[5, 1], [1, 0], [5, 1], [1, 0], [4, 1], [2, 0], [1, 0], [5, 1], [1, 0], [4, 1]], // 29
+            'Weds':  [[5, 1], [1, 0], [5, 1], [1, 0], [5, 1], [1, 0], [1, 0], [5, 1], [1, 0], [4, 1]], // 29
+            'Thurs': [[5, 1], [1, 0], [4, 1], [2, 0], [4, 1], [1, 0], [3, 1], [4, 1], [1, 0], [4, 1]], // 29
+            'Fri':   [[5, 1], [1, 0], [4, 1], [2, 0], [4, 1], [1, 0], [4, 1], [5, 0], [1, 0], [1, 0]] // 29 
+        }
+
+        days.forEach(day_name => {
+            const duration_this_day = durations[day_name];
+            const final = []
+            const day = data[day_name];
+            
+            let i2 = 0;
+            duration_this_day.forEach(duration_tuple => {
+                let overwritable = duration_tuple[1];
+                if (overwritable == 1) {
+                    let name = day[i2][0];
+                    let color = day[i2][1];
+                    final.push(seg(duration_tuple[0], name, color))
+                    i2 += 1;
+                } else {
+                    final.push(seg(duration_tuple[0], null))
+                }
+            })
+            
+            schedule[day_name] = final;
+        })
+        
+        document.querySelector('.ruler-track').innerHTML = ''
+        document.querySelector('#days').innerHTML = ''
+
+        buildRuler();
+        buildDays(schedule);
+    }
+
+    function buildBasedOnYearGroup(yeargroup, section_choices) {
+        let setLessons = {}
+        if (yeargroup == 'y12') {
+            setLessons = {
+                'Mon': {
+                    3: [['Drop in', 'maths'], COLORS.purple],
+                },
+                'Weds': {
+                    3: [['PS', 'maths'], COLORS.purple]
+                },
+                'Thurs': {
+                    4: [['Drop In', 'cs/phys'], COLORS.red]
+                },
+                'Fri': {
+                    3: [['PS', 'cs/phys'], COLORS.blue]
+                }
+            }
+        } else if (yeargroup == 'y13') {
+            setLessons = {
+                'Mon': {
+                    3: [['Drop in', 'maths'], COLORS.purple],
+                },
+                // 'Tues': {
+                //     3: [['cx', ''], COLORS.pink]
+                // },
+                // 'Weds': {
+                //     '5': [['cx', ''], COLORS.pink]
+                // },
+                'Thurs': {
+                    4: [['Drop In', 'cs/phys'], COLORS.red]
+                },
+                'Fri': {
+                    3: [['PS', 'cs/phys'], COLORS.blue]
+                }
+            }
+        }
+            
+        // Add special values to section choices
+        Object.entries(setLessons).forEach(entry => {
+            const [day_name, set_lessons] = entry;
+            Object.entries(set_lessons).forEach(entry2 => {
+                console.log(entry2[1]);
+                const [index, value] = entry2;
+                console.log('set');
+                section_choices[day_name].lessons[index-1] = {
+                    name: value[0][0],
+                    subtitle: value[0][1],
+                    color: value[1]
+                }
+            })
+        })
+
+        // Construct basic schedule to pass to buildFromData
+        console.log(section_choices);
+        let final_list = {};
+        days.forEach(day => {
+            let day_list = [];
+            let choices = section_choices[day].lessons;
+            choices.forEach(choice => {
+                day_list.push([[choice.name, choice.subtitle], choice.color || getColor(choice.name)])
+            })
+
+            final_list[day] = day_list;
+        })
+
+        console.log(final_list)
+        buildFromData(final_list);
+    }
+
+    function buildFromForm() {
+        let [yeargroup, section_choices] = readTimetableForm(document.querySelector('.input-form'));
+
+        buildBasedOnYearGroup(yeargroup, section_choices);
+    }
+
+    buildFromForm();
+    // buildFromData([[], [], [], [], []]);
+    </script>
+</body>
